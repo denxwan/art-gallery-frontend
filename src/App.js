@@ -5,6 +5,8 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import CreateArtifact from './CreateArtifact';
 import ArtifactDetails from './ArtifactDetails';
 import NotFound from './NotFound';
+import AvailableArtifacts from './AvailableArtifacts';
+import EditArtifact from './EditArtifact';
 
 function App() {
   return (
@@ -19,8 +21,14 @@ function App() {
             <Route path="/artifacts/create">
               <CreateArtifact />
             </Route>
-            <Route path="/artifacts/:id">
+            <Route exact path="/artifacts/:id">
               <ArtifactDetails />
+            </Route>
+            <Route exact path="/gallery">
+              <AvailableArtifacts />
+            </Route>
+            <Route exact path="/edit/:id">
+              <EditArtifact />
             </Route>
             <Route path="*">
               <NotFound />

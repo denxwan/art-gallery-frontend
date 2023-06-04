@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
+
 body {
   margin: 0;
   /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,6 +8,7 @@ body {
     sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #FFFFEA;
 }
 
 code {
@@ -15,21 +19,30 @@ code {
 /* base styles */
 * {
   margin: 0;
-  font-family: "Helvetica";
-  color: #333;
+  /* font-family: "DM Serif Display"; */
+  color: #562C2C;
 }
 .navbar {
+  font-family: "DM Serif Display";
   padding: 20px;
   display: flex;
   align-items: center;
-  max-width: 600px;
+  max-width: auto;
   margin: 0 auto;
-  border-bottom: 1px solid #b3b3b3;
+  border-bottom: 1px solid #562C2C;
+  background-color: #F5DFBB;
 }
 .navbar h1 {
-  color: #f1356d;
+  font-family: "DM Serif Display";
+  color: #562C2C;
+}
+.navbar h3 {
+  color: #F2542D;
 }
 .navbar .links {
+  color: #562C2C;
+  font-size: large;
+  font-weight: 900;
   margin-left: auto;
 }
 .navbar a {
@@ -38,7 +51,7 @@ code {
   padding: 6px;
 }
 .navbar a:hover {
-  color: #f1356d;
+  color: #F2542D;
 }
 .content {
   max-width: 600px;
@@ -46,19 +59,26 @@ code {
   padding: 20px;
 }
 
+.home-h2 {
+  font-family: "DM Serif Display";
+  color: #562C2C;
+}
+
 .artifact-preview {
+  font-family: "Space Grotesk";
   padding: 10px 16px;
   margin: 20px 0;
-  border-bottom: 1px solid #fafafa;
+  border: 1px solid #562C2C;
 }
 
 .artifact-preview:hover {
-  box-shadow: 1px 3px 5px rgba(0,0,0, 0.1) ;
+  box-shadow: 7px 7px ;
 }
 
 .artifact-preview h2 {
-  font-size: 20px;
-  color: #f1356d;
+  font-size: 22px;
+  font-weight: 800;
+  color: #F2542D;
   margin-bottom: 8px;
 }
 
@@ -67,20 +87,40 @@ code {
 }
 
 .artifact-details h2 {
-  font-size: 20px;
-  color: #f1356d;
+  font-size: 60px;
+  color: #F2542D;
   margin-bottom: 10px;
 }
-.artifact-details div {
+.artifact-details .para {
+  font-family: "Space Grotesk";
+  font-size: 20px;
+  color: #562C2C;
+  border: 1px solid;
+  padding: 10px;
+  /* margin-left: auto; */
+}
+.artifact-details .newdiv {
+  font-family: "Space Grotesk";
+  font-size: 30px;
   margin: 20px 0;
+  border: 1px solid;
+  padding: 10px;
 }
 .artifact-details button {
-  background: #f1356d;
-  color: #fff;
-  border: 0;
+  font-size: 20px;
+  font-family: "Space Grotesk";
+  background: #FFFFEA;
+  color: #562C2C;
+  /* border: 0;
   padding: 8px;
-  border-radius: 8px;
+  border-radius: 8px; */
   cursor: pointer;
+  border: 1px solid;
+  padding: 10px;
+}
+
+.artifact-details button:hover {
+  box-shadow: 7px 7px ;
 }
 
 
@@ -92,25 +132,58 @@ code {
 .create label {
   text-align: left;
   display: block;
+  font-family: "Space Grotesk";
+  font-size: 20px;
 }
 .create h2 {
-  font-size: 20px;
-  color: #f1356d;
+  font-family: "DM Serif Display";
+  color: #562C2C;
   margin-bottom: 30px;
 }
 .create input, .create textarea, .create select {
   width: 100%;
   padding: 6px 10px;
   margin: 10px 0;
-  border: 1px solid #ddd;
+  border: 1px solid #562C2C;
   box-sizing: border-box;
   display: block;
 }
+
+.create input:focus, .create textarea:focus, .create select:focus {
+  outline: none;
+}
 .create button {
-  background: #f1356d;
-  color: #fff;
-  border: 0;
+  /* background: white;
+  color: #562C2C;
+  /* border: 0;
   padding: 8px;
-  border-radius: 8px;
+  border-radius: 8px; */
+  /* cursor: pointer;
+  border: 1px solid;
+  padding: 10px; */
+  font-family: "Space Grotesk";
+  font-size: 20px;
+  background: #FFFFEA;
+  color: #562C2C;
+  /* border: 0;
+  padding: 8px;
+  border-radius: 8px; */
   cursor: pointer;
+  border: 1px solid;
+  padding: 10px;
+}
+
+.not-found {
+  font-family: "DM Serif Display";
+  margin-top: 200px;
+}
+
+.not-found p {
+  font-size: 20px;
+}
+
+.not-found{
+  font-size: 20px;
+  text-decoration: dotted;
+  color: #F2542D;
 }

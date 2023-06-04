@@ -27,15 +27,15 @@ const CreateArtifact = () => {
             },
             body: JSON.stringify(artifact)
         }).then(() => {
-            console.log('new artifact added');
             setIsPending(false);
             history.push("/");
+            console.log("Request - 'POST/artifacts'");
         })
     }
 
     return (
         <div className="create">
-            <h2>Create an Artifact</h2>
+            <h2 className="home-h2" style={{fontSize: 40 + 'px'}}>Create an Artifact</h2>
             <form onSubmit={handleSubmit}>
                 <label>Artifact Title:</label>
                 <input
@@ -83,8 +83,10 @@ const CreateArtifact = () => {
                     <option value="true">Yes</option>
                     <option value="false">No</option>
                 </select>
-                { !isPending && <button>Add Artifact</button> }
-                { isPending && <button disabled>Adding artifact..</button> }
+                <div style={{marginTop: 10 +'px'}}>
+                    { !isPending && <button style={{margin: 10 +'px'}}>Add Artifact</button> }
+                    { isPending && <button style={{margin: 10 +'px'}} disabled>Adding artifact..</button> }
+                </div>
             </form>
         </div>
     );
